@@ -1,4 +1,4 @@
-# fusion
+# vue-admin
 
 ## Project setup
 ```
