@@ -5,19 +5,18 @@
   </el-header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/mixin.scss';
 .el-header {
   background-color: #008de1;
   color: #fff;
   line-height: 60px;
-  display: flex;
-  justify-content: justify;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
+  @include flex(justify);
 }
 
 .header-title {

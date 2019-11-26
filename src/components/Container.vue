@@ -26,15 +26,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$bgcolor: #e9eef3;
 .el-container {
   height: 100%;
+  background-color: $bgcolor;
 }
 
 .el-main {
-  background-color: #e9eef3;
+  background-color: $bgcolor;
   color: #333;
   text-align: center;
   margin-top: 60px;
+  max-height: calc(100% - 60px - 20px);
+  overflow: hidden;
 }
 </style>

@@ -1,0 +1,6 @@
+@mixin flex($row: center, $col: center) {
+  -webkit-dislplay: flex;
+  display: flex;
+  justify-content: $row;
+  align-items: $col;
+}

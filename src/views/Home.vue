@@ -5,7 +5,9 @@
         <span>姓名：</span>
         <el-input placeholder="请输入文字" v-model="name"></el-input>
       </div>
+      <el-button type="success" class="search-btn">搜索</el-button>
     </div>
+    div.content
   </div>
 </template>
 
@@ -22,22 +24,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/mixin.scss';
 .main {
-  background: #fff;
   height: 100%;
-  padding: 20px;
 }
 
 .search-box {
+  background: #fff;
+  padding: 15px;
+  @include flex(justify);
 }
 
 .search-input {
   width: 240px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex(flex-start);
   span {
     min-width: 60px;
   }
+}
+
+.search-btn {
+  margin-left: 20px;
 }
 </style>
