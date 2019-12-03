@@ -5,19 +5,33 @@
         <span>姓名：</span>
         <el-input placeholder="请输入文字" v-model="name"></el-input>
       </div>
-      <el-button type="success" class="search-btn">搜索</el-button>
+      <el-button class="search-btn" type="success">搜索</el-button>
     </div>
-    div.content
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import api from '../api'
+import log from '../decorator/log'
 export default {
   name: 'home',
   data () {
     return {
       name: ''
+    }
+  },
+  created () {
+    this.init()
+  },
+  methods: {
+    @log({
+      type: '22'
+    })
+    async init () {
+      const res = await api.post('/api/getIntelligentEvaluateStatus')
+      console.log(res)
+      return 'noBuried'
     }
   }
 }
